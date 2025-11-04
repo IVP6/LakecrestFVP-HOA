@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Lakecrest HOA</title>
+    <meta name="description" content="Contact Lakecrest Homeowners Association">
+    <meta name="author" content="Ivann Padron">
+    <link rel="stylesheet" href="styles/lakecrest.css">
+</head>
+
+<body>
+    <div class="sticky-logo" id="stickyLogo">
+        <img src="images/lakecrest-logo.png"
+            alt="Circular Logo with a tree in the middle, the word 'lakecrest is a the top part of circle, FVP centered on top of the tree, HOA is centered at the bottom of the circular image."
+            id="logo">
+    </div>
+
+    <header>
+        <nav id="navMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="documents.html">Documents</a></li>
+                <li><a href="providers.html">Service Providers</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>Contact Us</h1>
+        <p>Get in touch with the Lakecrest HOA Board</p>
+    </div>
+
+    <div class="contact-page-container">
+        <div class="contact-info-section">
+            <div class="contact-card">
+                <h2>Property Management</h2>
+                <div class="contact-details">
+                    <img src="images/real-manage-logo.png" alt="RealManage Logo" class="company-logo-large">
+                    <h3>RealManage</h3>
+                    <p><strong>Community Manager:</strong> [Manager Name]</p>
+                    <p><strong>Phone:</strong> <a href="tel:+1234567890">(123) 456-7890</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@lakecrest.com">info@lakecrest.com</a></p>
+                    <p><strong>Office Hours:</strong><br>
+                        Monday - Friday: 9:00 AM - 5:00 PM<br>
+                        Saturday - Sunday: Closed</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h2>HOA Board</h2>
+                <div class="contact-details">
+                    <p><strong>Board Email:</strong> <a href="mailto:board@lakecrest.com">board@lakecrest.com</a></p>
+                    <p><strong>Board Meetings:</strong> Third Thursday of each month at 7:00 PM</p>
+                    <p><strong>Location:</strong> Community Clubhouse</p>
+                    <p>All residents are welcome to attend board meetings. Please email in advance if you'd like to add
+                        an item to the agenda.</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h2>Emergency Contacts</h2>
+                <div class="contact-details">
+                    <p><strong>Police:</strong> <a href="tel:911">911</a></p>
+                    <p><strong>Non-Emergency Police:</strong> <a href="tel:+1234567890">(123) 456-7890</a></p>
+                    <p><strong>Fire Department:</strong> <a href="tel:911">911</a></p>
+                    <p><strong>Pool Emergency:</strong> <a href="tel:+1234567890">(123) 456-7890</a></p>
+                    <p><strong>Gate Issues:</strong> <a href="tel:+1234567890">(123) 456-7890</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Property Address *</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="community">Community *</label>
+                    <select id="community" name="community" required>
+                        <option value="">Select your community</option>
+                        <option value="forest">Lakecrest Forest</option>
+                        <option value="village">Lakecrest Village</option>
+                        <option value="park">Lakecrest Park</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="maintenance">Maintenance Request</option>
+                        <option value="violation">Violation Report</option>
+                        <option value="amenities">Amenities Question</option>
+                        <option value="billing">Billing/Dues Question</option>
+                        <option value="architectural">Architectural Approval</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Lakecrest Homeowners Association. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Navigation hover functionality
+        const stickyLogo = document.getElementById('stickyLogo');
+        const header = document.querySelector('header');
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                address: document.getElementById('address').value,
+                community: document.getElementById('community').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            // For now, just show a success message
+            // In production, you'd send this to a server or email service
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+
+</body>
+
+</html>

@@ -634,6 +634,8 @@ nav ul li a:hover {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: var(--box-shadow);
+    text-decoration: none;
+    display: inline-block;
 }
 
 .contact-btn:hover {
@@ -865,6 +867,8 @@ nav ul li a:hover {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: var(--box-shadow);
+    text-decoration: none;
+    display: inline-block;
 }
 
 .contact-btn:hover {
@@ -1179,5 +1183,260 @@ footer p {
 
     .bio-popup p {
         font-size: 0.8rem;
+    }
+}
+
+/* Contact Page Styles */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2a5e0f 100%);
+    color: white;
+    padding: 6rem clamp(1rem, 5vw, 4rem) 3rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.page-header h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+}
+
+.page-header p {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    margin: 0;
+    opacity: 0.9;
+}
+
+.contact-page-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem clamp(1rem, 5vw, 4rem);
+}
+
+.contact-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card h2 {
+    color: var(--primary-color);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact-details p {
+    margin: 0.5rem 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.contact-details strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.contact-details a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.company-logo-large {
+    max-width: 150px;
+    height: auto;
+    margin: 1rem 0;
+    opacity: 0.8;
+}
+
+.contact-form-section {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+}
+
+.contact-form-section h2 {
+    color: var(--primary-color);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(220, 189, 58, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-family: var(--font-family);
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive design for contact page */
+@media (max-width: 1024px) {
+    .contact-page-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form-section {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 5rem 1rem 2rem;
+    }
+
+    .contact-page-container {
+        padding: 2rem 1rem;
+    }
+
+    .contact-card,
+    .contact-form-section {
+        padding: 1.5rem;
+    }
+}
+
+/* Under Construction Page Styles */
+.under-construction {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem clamp(1rem, 5vw, 4rem);
+}
+
+.construction-content {
+    text-align: center;
+    max-width: 600px;
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--secondary-color);
+}
+
+.construction-content h2 {
+    color: var(--primary-color);
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 0 0 1.5rem 0;
+    font-weight: 700;
+}
+
+.construction-content p {
+    color: #666;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    margin: 0 0 2rem 0;
+    line-height: 1.6;
+}
+
+.construction-content .cta-btn {
+    display: inline-block;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .under-construction {
+        min-height: 50vh;
+        padding: 2rem 1rem;
+    }
+
+    .construction-content {
+        padding: 2rem 1.5rem;
     }
 }
