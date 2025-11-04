@@ -1189,7 +1189,7 @@ footer p {
 /* Contact Page Styles */
 .page-header {
     background: linear-gradient(135deg, var(--primary-color) 0%, #2a5e0f 100%);
-    color: white;
+    color: var(--secondary-color);
     padding: 6rem clamp(1rem, 5vw, 4rem) 3rem;
     text-align: center;
     margin-top: 0;
@@ -1199,12 +1199,14 @@ footer p {
     font-size: clamp(2.5rem, 5vw, 4rem);
     margin: 0 0 1rem 0;
     font-weight: 600;
+    color: var(--secondary-color);
 }
 
 .page-header p {
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
     margin: 0;
     opacity: 0.9;
+    color: var(--secondary-color);
 }
 
 .contact-page-container {
